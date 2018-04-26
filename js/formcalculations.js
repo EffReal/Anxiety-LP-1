@@ -66,6 +66,40 @@ function getCakeSizePrice()
     return cakeSizePrice;
 }
 
+function getCakeSizePrice1()
+{  
+    var cakeSizePrice1=0;
+    //Get a reference to the form id="anxietytest"
+    var theForm = document.forms["anxietytest"];
+    //Get a reference to the cake the user Chooses name=selectedCake":
+    var selectedCake = theForm.elements["selectedcake1"];
+    //Here since there are 4 radio buttons selectedCake.length = 4
+    //We loop through each radio buttons
+    for(var i = 0; i < selectedCake1.length; i++)
+    {
+        //if the radio button is checked
+        if(selectedCake1[i].checked)
+        {
+            //we set cakeSizePrice to the value of the selected radio button
+            //i.e. if the user choose the 8" cake we set it to 25
+            //by using the cake_prices array
+            //We get the selected Items value
+            //For example cake_prices["Round8".value]"
+            cakeSizePrice = cake_prices[selectedCake1[i].value];
+            //If we get a match then we break out of this loop
+            //No reason to continue if we get a match
+            break;
+        }
+    }
+    //We return the cakeSizePrice
+    return cakeSizePrice1;
+}
+
+
+
+
+
+
 //This function finds the filling price based on the 
 //drop down selection
 function getFillingPrice()
@@ -124,7 +158,7 @@ function calculateTotal()
 {
     //Here we get the total price by calling our function
     //Each function returns a number so by calling them we add the values they return together
-    var cakePrice = getCakeSizePrice() + getFillingPrice() + candlesPrice() + insciptionPrice();
+    var cakePrice = getCakeSizePrice() + getCakeSizePrice1() + getFillingPrice() + candlesPrice() + insciptionPrice();
     
     //display the result
     var divobj = document.getElementById('totalPrice');

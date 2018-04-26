@@ -72,7 +72,7 @@ function getCakeSizePrice1()
     //Get a reference to the form id="anxietytest"
     var theForm = document.forms["anxietytest"];
     //Get a reference to the cake the user Chooses name=selectedCake":
-    var selectedCake = theForm.elements["selectedcake1"];
+    var selectedCake1 = theForm.elements["selectedcake1"];
     //Here since there are 4 radio buttons selectedCake.length = 4
     //We loop through each radio buttons
     for(var i = 0; i < selectedCake1.length; i++)
@@ -85,7 +85,7 @@ function getCakeSizePrice1()
             //by using the cake_prices array
             //We get the selected Items value
             //For example cake_prices["Round8".value]"
-            cakeSizePrice = cake_prices[selectedCake1[i].value];
+            cakeSizePrice1 = cake_prices[selectedCake1[i].value];
             //If we get a match then we break out of this loop
             //No reason to continue if we get a match
             break;

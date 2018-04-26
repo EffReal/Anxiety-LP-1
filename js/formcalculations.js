@@ -14,26 +14,7 @@ You are free to use the code in Commercial or non-commercial projects
  cake_prices["Round10"]=3;
  cake_prices["Round12"]=4;
  
- //Set up an associative array 
- //The keys represent the filling type
- //The value represents the cost of the filling i.e. Lemon filling is $5,Dobash filling is $9
- //We use this this array when the user selects a filling from the form
- var filling_prices= new Array();
- filling_prices["None"]=0;
- filling_prices["Lemon"]=5;
- filling_prices["Custard"]=5;
- filling_prices["Fudge"]=7;
- filling_prices["Mocha"]=8;
- filling_prices["Raspberry"]=10;
- filling_prices["Pineapple"]=5;
- filling_prices["Dobash"]=9;
- filling_prices["Mint"]=5;
- filling_prices["Cherry"]=5;
- filling_prices["Apricot"]=8;
- filling_prices["Buttercream"]=7;
- filling_prices["Chocolate Mousse"]=12;
- 
-	 
+  
 	 
 // getCakeSizePrice() finds the price based on the size of the cake.
 // Here, we need to take user's the selection from radio button selection
@@ -124,68 +105,130 @@ function getCakeSizePrice2()
     return cakeSizePrice2;
 }
 
-
-
-
-//This function finds the filling price based on the 
-//drop down selection
-function getFillingPrice()
-{
-    var cakeFillingPrice=0;
-    //Get a reference to the form id="cakeform"
+function getCakeSizePrice3()
+{  
+    var cakeSizePrice2=0;
+    //Get a reference to the form id="anxietytest"
     var theForm = document.forms["anxietytest"];
-    //Get a reference to the select id="filling"
-     var selectedFilling = theForm.elements["filling"];
-     
-    //set cakeFilling Price equal to value user chose
-    //For example filling_prices["Lemon".value] would be equal to 5
-    cakeFillingPrice = filling_prices[selectedFilling.value];
-
-    //finally we return cakeFillingPrice
-    return cakeFillingPrice;
-}
-
-//candlesPrice() finds the candles price based on a check box selection
-function candlesPrice()
-{
-    var candlePrice=0;
-    //Get a reference to the form id="cakeform"
-    var theForm = document.forms["anxietytest"];
-    //Get a reference to the checkbox id="includecandles"
-    var includeCandles = theForm.elements["includecandles"];
-
-    //If they checked the box set candlePrice to 5
-    if(includeCandles.checked==true)
+    //Get a reference to the cake the user Chooses name=selectedCake":
+    var selectedCake3 = theForm.elements["selectedcake3"];
+    //Here since there are 4 radio buttons selectedCake.length = 4
+    //We loop through each radio buttons
+    for(var i = 0; i < selectedCake3.length; i++)
     {
-        candlePrice=5;
+        //if the radio button is checked
+        if(selectedCake3[i].checked)
+        {
+            //we set cakeSizePrice to the value of the selected radio button
+            //i.e. if the user choose the 8" cake we set it to 25
+            //by using the cake_prices array
+            //We get the selected Items value
+            //For example cake_prices["Round8".value]"
+            cakeSizePrice2 = cake_prices[selectedCake3[i].value];
+            //If we get a match then we break out of this loop
+            //No reason to continue if we get a match
+            break;
+        }
     }
-    //finally we return the candlePrice
-    return candlePrice;
+    //We return the cakeSizePrice
+    return cakeSizePrice3;
 }
 
-function insciptionPrice()
-{
-    //This local variable will be used to decide whether or not to charge for the inscription
-    //If the user checked the box this value will be 20
-    //otherwise it will remain at 0
-    var inscriptionPrice=0;
-    //Get a refernce to the form id="cakeform"
+function getCakeSizePrice4()
+{  
+    var cakeSizePrice2=0;
+    //Get a reference to the form id="anxietytest"
     var theForm = document.forms["anxietytest"];
-    //Get a reference to the checkbox id="includeinscription"
-    var includeInscription = theForm.elements["includeinscription"];
-    //If they checked the box set inscriptionPrice to 20
-    if(includeInscription.checked==true){
-        inscriptionPrice=20;
+    //Get a reference to the cake the user Chooses name=selectedCake":
+    var selectedCake4 = theForm.elements["selectedcake4"];
+    //Here since there are 4 radio buttons selectedCake.length = 4
+    //We loop through each radio buttons
+    for(var i = 0; i < selectedCake4.length; i++)
+    {
+        //if the radio button is checked
+        if(selectedCake4[i].checked)
+        {
+            //we set cakeSizePrice to the value of the selected radio button
+            //i.e. if the user choose the 8" cake we set it to 25
+            //by using the cake_prices array
+            //We get the selected Items value
+            //For example cake_prices["Round8".value]"
+            cakeSizePrice4 = cake_prices[selectedCake4[i].value];
+            //If we get a match then we break out of this loop
+            //No reason to continue if we get a match
+            break;
+        }
     }
-    //finally we return the inscriptionPrice
-    return inscriptionPrice;
+    //We return the cakeSizePrice
+    return cakeSizePrice4;
 }
+
+function getCakeSizePrice5()
+{  
+    var cakeSizePrice2=0;
+    //Get a reference to the form id="anxietytest"
+    var theForm = document.forms["anxietytest"];
+    //Get a reference to the cake the user Chooses name=selectedCake":
+    var selectedCake5 = theForm.elements["selectedcake5"];
+    //Here since there are 4 radio buttons selectedCake.length = 4
+    //We loop through each radio buttons
+    for(var i = 0; i < selectedCake5.length; i++)
+    {
+        //if the radio button is checked
+        if(selectedCake5[i].checked)
+        {
+            //we set cakeSizePrice to the value of the selected radio button
+            //i.e. if the user choose the 8" cake we set it to 25
+            //by using the cake_prices array
+            //We get the selected Items value
+            //For example cake_prices["Round8".value]"
+            cakeSizePrice5 = cake_prices[selectedCake5[i].value];
+            //If we get a match then we break out of this loop
+            //No reason to continue if we get a match
+            break;
+        }
+    }
+    //We return the cakeSizePrice
+    return cakeSizePrice5;
+}
+
+function getCakeSizePrice6()
+{  
+    var cakeSizePrice2=0;
+    //Get a reference to the form id="anxietytest"
+    var theForm = document.forms["anxietytest"];
+    //Get a reference to the cake the user Chooses name=selectedCake":
+    var selectedCake6 = theForm.elements["selectedcake6"];
+    //Here since there are 4 radio buttons selectedCake.length = 4
+    //We loop through each radio buttons
+    for(var i = 0; i < selectedCake6.length; i++)
+    {
+        //if the radio button is checked
+        if(selectedCake6[i].checked)
+        {
+            //we set cakeSizePrice to the value of the selected radio button
+            //i.e. if the user choose the 8" cake we set it to 25
+            //by using the cake_prices array
+            //We get the selected Items value
+            //For example cake_prices["Round8".value]"
+            cakeSizePrice6 = cake_prices[selectedCake6[i].value];
+            //If we get a match then we break out of this loop
+            //No reason to continue if we get a match
+            break;
+        }
+    }
+    //We return the cakeSizePrice
+    return cakeSizePrice6;
+}
+
+
+
         
 function calculateTotal()
 {
     //Here we get the total price by calling our function
     //Each function returns a number so by calling them we add the values they return together
-    var cakePrice = getCakeSizePrice() + getCakeSizePrice1() + getCakeSizePrice2() + getFillingPrice() + candlesPrice() + insciptionPrice();
+    var cakePrice = getCakeSizePrice() + getCakeSizePrice1() + getCakeSizePrice2() + getCakeSizePrice3() + getCakeSizePrice4() + getCakeSizePrice5() + getCakeSizePrice6();
     
     //display the result
     var divobj = document.getElementById('totalPrice');

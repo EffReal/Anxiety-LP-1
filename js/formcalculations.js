@@ -107,7 +107,7 @@ function getCakeSizePrice2()
 
 function getCakeSizePrice3()
 {  
-    var cakeSizePrice2=0;
+    var cakeSizePrice3=0;
     //Get a reference to the form id="anxietytest"
     var theForm = document.forms["anxietytest"];
     //Get a reference to the cake the user Chooses name=selectedCake":
@@ -136,7 +136,7 @@ function getCakeSizePrice3()
 
 function getCakeSizePrice4()
 {  
-    var cakeSizePrice2=0;
+    var cakeSizePrice4=0;
     //Get a reference to the form id="anxietytest"
     var theForm = document.forms["anxietytest"];
     //Get a reference to the cake the user Chooses name=selectedCake":
@@ -165,7 +165,7 @@ function getCakeSizePrice4()
 
 function getCakeSizePrice5()
 {  
-    var cakeSizePrice2=0;
+    var cakeSizePrice5=0;
     //Get a reference to the form id="anxietytest"
     var theForm = document.forms["anxietytest"];
     //Get a reference to the cake the user Chooses name=selectedCake":
@@ -194,7 +194,7 @@ function getCakeSizePrice5()
 
 function getCakeSizePrice6()
 {  
-    var cakeSizePrice2=0;
+    var cakeSizePrice6=0;
     //Get a reference to the form id="anxietytest"
     var theForm = document.forms["anxietytest"];
     //Get a reference to the cake the user Chooses name=selectedCake":

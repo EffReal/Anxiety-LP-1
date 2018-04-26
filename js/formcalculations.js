@@ -41,7 +41,7 @@ function getCakeSizePrice()
 {  
     var cakeSizePrice=0;
     //Get a reference to the form id="cakeform"
-    var theForm = document.forms["cakeform"];
+    var theForm = document.forms["anxietytest"];
     //Get a reference to the cake the user Chooses name=selectedCake":
     var selectedCake = theForm.elements["selectedcake"];
     //Here since there are 4 radio buttons selectedCake.length = 4
@@ -72,7 +72,7 @@ function getFillingPrice()
 {
     var cakeFillingPrice=0;
     //Get a reference to the form id="cakeform"
-    var theForm = document.forms["cakeform"];
+    var theForm = document.forms["anxietytest"];
     //Get a reference to the select id="filling"
      var selectedFilling = theForm.elements["filling"];
      
@@ -89,7 +89,7 @@ function candlesPrice()
 {
     var candlePrice=0;
     //Get a reference to the form id="cakeform"
-    var theForm = document.forms["cakeform"];
+    var theForm = document.forms["anxietytest"];
     //Get a reference to the checkbox id="includecandles"
     var includeCandles = theForm.elements["includecandles"];
 
@@ -109,7 +109,7 @@ function insciptionPrice()
     //otherwise it will remain at 0
     var inscriptionPrice=0;
     //Get a refernce to the form id="cakeform"
-    var theForm = document.forms["cakeform"];
+    var theForm = document.forms["anxietytest"];
     //Get a reference to the checkbox id="includeinscription"
     var includeInscription = theForm.elements["includeinscription"];
     //If they checked the box set inscriptionPrice to 20

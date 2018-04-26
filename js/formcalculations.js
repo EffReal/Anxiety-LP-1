@@ -95,7 +95,34 @@ function getCakeSizePrice1()
     return cakeSizePrice1;
 }
 
-
+function getCakeSizePrice2()
+{  
+    var cakeSizePrice2=0;
+    //Get a reference to the form id="anxietytest"
+    var theForm = document.forms["anxietytest"];
+    //Get a reference to the cake the user Chooses name=selectedCake":
+    var selectedCake2 = theForm.elements["selectedcake2"];
+    //Here since there are 4 radio buttons selectedCake.length = 4
+    //We loop through each radio buttons
+    for(var i = 0; i < selectedCake2.length; i++)
+    {
+        //if the radio button is checked
+        if(selectedCake2[i].checked)
+        {
+            //we set cakeSizePrice to the value of the selected radio button
+            //i.e. if the user choose the 8" cake we set it to 25
+            //by using the cake_prices array
+            //We get the selected Items value
+            //For example cake_prices["Round8".value]"
+            cakeSizePrice2 = cake_prices[selectedCake2[i].value];
+            //If we get a match then we break out of this loop
+            //No reason to continue if we get a match
+            break;
+        }
+    }
+    //We return the cakeSizePrice
+    return cakeSizePrice2;
+}
 
 
 

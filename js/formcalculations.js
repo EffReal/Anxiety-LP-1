@@ -308,8 +308,8 @@ function calculateTotal()
 
 }
 
-function hideTotal()
-{
-    var divobj = document.getElementById('totalPrice');
-    divobj.style.display='none';
-}
+//function hideTotal()
+//{
+   // var divobj = document.getElementById('totalPrice');
+    //divobj.style.display='none';
+//}

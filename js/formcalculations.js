@@ -124,7 +124,7 @@ function getCakeSizePrice3()
             //by using the cake_prices array
             //We get the selected Items value
             //For example cake_prices["Round8".value]"
-            cakeSizePrice2 = cake_prices[selectedCake3[i].value];
+            cakeSizePrice3 = cake_prices[selectedCake3[i].value];
             //If we get a match then we break out of this loop
             //No reason to continue if we get a match
             break;

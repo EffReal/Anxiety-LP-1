@@ -9,12 +9,31 @@ You are free to use the code in Commercial or non-commercial projects
  //The keys represent the size of the cake
  //The values represent the cost of the cake i.e A 10" cake cost's $35
  var cake_prices = new Array();
- cake_prices["Round6"]=1;
- cake_prices["Round8"]=2;
- cake_prices["Round10"]=3;
- cake_prices["Round12"]=4;
+ cake_prices["Round6"]=20;
+ cake_prices["Round8"]=25;
+ cake_prices["Round10"]=35;
+ cake_prices["Round12"]=75;
  
-  
+ //Set up an associative array 
+ //The keys represent the filling type
+ //The value represents the cost of the filling i.e. Lemon filling is $5,Dobash filling is $9
+ //We use this this array when the user selects a filling from the form
+ var filling_prices= new Array();
+ filling_prices["None"]=0;
+ filling_prices["Lemon"]=5;
+ filling_prices["Custard"]=5;
+ filling_prices["Fudge"]=7;
+ filling_prices["Mocha"]=8;
+ filling_prices["Raspberry"]=10;
+ filling_prices["Pineapple"]=5;
+ filling_prices["Dobash"]=9;
+ filling_prices["Mint"]=5;
+ filling_prices["Cherry"]=5;
+ filling_prices["Apricot"]=8;
+ filling_prices["Buttercream"]=7;
+ filling_prices["Chocolate Mousse"]=12;
+ 
+	 
 	 
 // getCakeSizePrice() finds the price based on the size of the cake.
 // Here, we need to take user's the selection from radio button selection
@@ -222,18 +241,70 @@ function getCakeSizePrice6()
 }
 
 
+//This function finds the filling price based on the 
+//drop down selection
+function getFillingPrice()
+{
+    var cakeFillingPrice=0;
+    //Get a reference to the form id="cakeform"
+    var theForm = document.forms["cakeform"];
+    //Get a reference to the select id="filling"
+     var selectedFilling = theForm.elements["filling"];
+     
+    //set cakeFilling Price equal to value user chose
+    //For example filling_prices["Lemon".value] would be equal to 5
+    cakeFillingPrice = filling_prices[selectedFilling.value];
 
+    //finally we return cakeFillingPrice
+    return cakeFillingPrice;
+}
+
+//candlesPrice() finds the candles price based on a check box selection
+function candlesPrice()
+{
+    var candlePrice=0;
+    //Get a reference to the form id="cakeform"
+    var theForm = document.forms["cakeform"];
+    //Get a reference to the checkbox id="includecandles"
+    var includeCandles = theForm.elements["includecandles"];
+
+    //If they checked the box set candlePrice to 5
+    if(includeCandles.checked==true)
+    {
+        candlePrice=5;
+    }
+    //finally we return the candlePrice
+    return candlePrice;
+}
+
+function insciptionPrice()
+{
+    //This local variable will be used to decide whether or not to charge for the inscription
+    //If the user checked the box this value will be 20
+    //otherwise it will remain at 0
+    var inscriptionPrice=0;
+    //Get a refernce to the form id="cakeform"
+    var theForm = document.forms["cakeform"];
+    //Get a reference to the checkbox id="includeinscription"
+    var includeInscription = theForm.elements["includeinscription"];
+    //If they checked the box set inscriptionPrice to 20
+    if(includeInscription.checked==true){
+        inscriptionPrice=20;
+    }
+    //finally we return the inscriptionPrice
+    return inscriptionPrice;
+}
         
 function calculateTotal()
 {
     //Here we get the total price by calling our function
     //Each function returns a number so by calling them we add the values they return together
-    var cakePrice = getCakeSizePrice() + getCakeSizePrice1() + getCakeSizePrice2() + getCakeSizePrice3() + getCakeSizePrice4() + getCakeSizePrice5() + getCakeSizePrice6();
+    var cakePrice = getCakeSizePrice() + getFillingPrice() + candlesPrice() + insciptionPrice() + getCakeSizePrice1() + getCakeSizePrice2() + getCakeSizePrice3() + getCakeSizePrice4() + getCakeSizePrice5() + getCakeSizePrice6();
     
     //display the result
     var divobj = document.getElementById('totalPrice');
     divobj.style.display='block';
-    divobj.innerHTML = "Your Score&ensp;"+cakePrice;
+    divobj.innerHTML = "Your Total&nbsp;  "+cakePrice;
 
 }
 

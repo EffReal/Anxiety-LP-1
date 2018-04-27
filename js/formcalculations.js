@@ -9,10 +9,10 @@ You are free to use the code in Commercial or non-commercial projects
  //The keys represent the size of the cake
  //The values represent the cost of the cake i.e A 10" cake cost's $35
  var cake_prices = new Array();
- cake_prices["Round6"]=20;
- cake_prices["Round8"]=25;
- cake_prices["Round10"]=35;
- cake_prices["Round12"]=75;
+ cake_prices["Round6"]=1;
+ cake_prices["Round8"]=2;
+ cake_prices["Round10"]=3;
+ cake_prices["Round12"]=4;
  
  //Set up an associative array 
  //The keys represent the filling type
@@ -308,8 +308,8 @@ function calculateTotal()
 
 }
 
-//function hideTotal()
-//{
-   // var divobj = document.getElementById('totalPrice');
-    //divobj.style.display='none';
-//}
+function hideTotal()
+{
+    var divobj = document.getElementById('totalPrice');
+    divobj.style.display='none';
+}
